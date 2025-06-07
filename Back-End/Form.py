@@ -17,7 +17,7 @@ def recomendar_filmes(catalogo):
 
 
     if recomendados:
-        print("\n🎬 Filmes recomendados para você:")
+        print("\n Filmes recomendados para você:")
         for filme in recomendados:
             print(f"- {filme['titulo']} ({filme['ano']}) - Gênero: {filme['genero']}")
     else:
