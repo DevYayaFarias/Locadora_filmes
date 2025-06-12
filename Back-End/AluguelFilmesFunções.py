@@ -1,6 +1,6 @@
 import utilsAluguelFilmes as u
 
-filmes = {
+catalogo = {
     "Matrix": {"ano": 1999, "genero": "Ficção", "disponibilidade": "disponível", "diretor": "Lana Wachowski, Lilly Wachowski", "empresa produtora": "Warner Bros.", "avaliação": 87},
     "Titanic": {"ano": 1997, "genero": "Romance", "disponibilidade": "disponível", "diretor": "James Cameron", "empresa produtora": "Paramount Pictures", "avaliação": 89},
     "Vingadores": {"ano": 2012, "genero": "Ação", "disponibilidade": "disponível", "diretor": "Joss Whedon", "empresa produtora": "Marvel Studios", "avaliação": 91},
@@ -48,7 +48,7 @@ while True:
     print()
 
     if ver == "s":
-        u.display_catalog(filmes)
+        u.display_catalog(catalogo)
         break
     elif ver == "n":
         break
@@ -57,10 +57,10 @@ while True:
         print()
         continue
 
-filme_choice, attempt_choice = u.get_movie_info(filmes)
+filme_choice, attempt_choice = u.get_movie_info(catalogo)
 
-u.get_additional_movie_info(filmes, filme_choice, attempt_choice)
+u.get_additional_movie_info(catalogo, filme_choice, attempt_choice)
 
 print("_-_-_- ALUGUEL -_-_-_")
 print()
-u.rent_movies(filmes)
+u.rent_movies(catalogo)
